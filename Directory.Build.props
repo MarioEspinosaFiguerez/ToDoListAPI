@@ -1,0 +1,6 @@
+<!-- Search the directory where .props is and go for the file -->
+<Project>
+	<ItemGroup>
+		<Compile Include="$(MSBuildThisFileDirectory)GlobalUsing.cs" />
+	</ItemGroup>
+</Project>

@@ -4,7 +4,7 @@ namespace API.Extensions
 {
     public static class EndpointExtensions
     {
-        public static void MapEndpoints(this IEndpointRouteBuilder app)
+        public static void MapAllEndpoints(this IEndpointRouteBuilder app)
         {
             var endpointType = typeof(IEndpoint);
 

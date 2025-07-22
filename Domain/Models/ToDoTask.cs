@@ -4,13 +4,10 @@ public class ToDoTask
 {
     public Guid Id { get; init; } = Guid.NewGuid();
 
-    [Required(ErrorMessage = "The title is mandatory"), MaxLength(50)]
     public required string Title { get; set; } = string.Empty;
 
-    [Required(ErrorMessage = "The description is mandatory"), MaxLength(200)]
     public required string Description { get; set; } = string.Empty;
 
-    [Required]
     public required Guid UserAssignedId { get; set; }
 
     public User AssignedTo { get; set; }

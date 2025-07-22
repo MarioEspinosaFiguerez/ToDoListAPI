@@ -5,3 +5,8 @@ global using Application.Services;
 global using Application.Interfaces;
 global using Infrastructure.AppDbContext;
 global using Infrastructure.Repositories;
+global using API.Contracts;
+global using API.Extensions;
+global using Application.DTOs;
+global using FluentValidation;
+global using FluentValidation.Results;

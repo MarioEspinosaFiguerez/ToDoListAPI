@@ -1,6 +1,7 @@
 ﻿global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.EntityFrameworkCore;
 global using Serilog;
+global using FluentValidation;
 global using Application.Services;
 global using Application.Interfaces;
 global using Infrastructure.AppDbContext;
@@ -8,5 +9,4 @@ global using Infrastructure.Repositories;
 global using API.Contracts;
 global using API.Extensions;
 global using Application.DTOs;
-global using FluentValidation;
-global using FluentValidation.Results;
+global using Application.Validators;

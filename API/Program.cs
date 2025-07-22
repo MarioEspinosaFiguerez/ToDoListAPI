@@ -1,3 +1,6 @@
+using Application.DTOs;
+using Application.Validators;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // To get custom configuration. If you dont want, just quit the options in AddSwaggerGen and this variables
@@ -28,7 +31,7 @@ builder.Services.AddScoped<ITaskService, TaskService>();
 builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 
 // Fluent validation
-//builder.Services.AddValidatorsFromAssemblyContaining<>();
+builder.Services.AddValidatorsFromAssemblyContaining<ToDoTaskDtoValidator>();
 
 var app = builder.Build();
 
@@ -36,6 +39,8 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
-app.MapControllers();
+
+// Maps all endpoints with the IEndpoint interface
+app.MapEndpoints();
 
 app.Run();

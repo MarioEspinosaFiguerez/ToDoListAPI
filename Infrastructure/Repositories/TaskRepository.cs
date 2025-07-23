@@ -7,8 +7,5 @@ public class TaskRepository : ITaskRepository
 
     public TaskRepository(TodoListDbContext context) => _context = context;
 
-    public async Task<IEnumerable<ToDoTask>> GetAllTasks()
-    {
-        return await _context.Tasks.ToListAsync();
-    }
+    public async Task<IEnumerable<ToDoTask>> GetAllTasks() => await _context.Tasks.AsNoTracking().ToListAsync();
 }

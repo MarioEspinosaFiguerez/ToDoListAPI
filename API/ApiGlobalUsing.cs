@@ -2,6 +2,7 @@
 global using Microsoft.EntityFrameworkCore;
 global using Serilog;
 global using FluentValidation;
+global using Microsoft.AspNetCore.OpenApi;
 global using Application.Services;
 global using Application.Interfaces;
 global using Infrastructure.AppDbContext;

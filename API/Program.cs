@@ -23,7 +23,6 @@ builder.Services.AddSwaggerGen(options =>
 builder.Services.AddDbContext<TodoListDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Connection")));
 
 // Dependency Injection
-
 builder.Services.AddScoped<ITaskService, TaskService>();
 builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 
@@ -36,6 +35,9 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
+
+// Exception Custom Middleware
+app.UseMiddleware<ExceptionMiddleware>();
 
 // Maps all endpoints with the IEndpoint interface
 app.MapAllEndpoints();

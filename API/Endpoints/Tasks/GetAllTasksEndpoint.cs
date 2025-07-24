@@ -1,5 +1,4 @@
-﻿
-namespace API.Endpoints.Tasks;
+﻿namespace API.Endpoints.Tasks;
 
 public class GetAllTasksEndpoint : IEndpoint
 {

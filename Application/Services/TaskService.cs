@@ -16,8 +16,8 @@ public class TaskService : ITaskService
             Title = task.Title,
             Description = task.Description,
             UserAssignedId = task.UserAssignedId,
-            Priority = task.Priority,
-            State = task.State,
+            Priority = new EnumDTO(task.PriorityId, task.Priority.Name),
+            State = new EnumDTO(task.StateId, task.State.Name),
             Deadline = task.Deadline,
         });
     }

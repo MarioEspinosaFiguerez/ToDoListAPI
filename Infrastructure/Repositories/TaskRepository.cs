@@ -1,5 +1,4 @@
-﻿
-namespace Infrastructure.Repositories;
+﻿namespace Infrastructure.Repositories;
 
 public class TaskRepository : ITaskRepository
 {
@@ -7,5 +6,7 @@ public class TaskRepository : ITaskRepository
 
     public TaskRepository(TodoListDbContext context) => _context = context;
 
-    public async Task<IEnumerable<ToDoTask>> GetAllTasks() => await _context.Tasks.AsNoTracking().ToListAsync();
+    public async Task<IEnumerable<ToDoTask>> GetAllTasks() => await _context.Tasks
+                                                                .Include(task => task.Priority)
+                                                                .Include(task => task.State).AsNoTracking().ToListAsync();
 }

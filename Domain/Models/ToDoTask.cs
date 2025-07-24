@@ -12,20 +12,22 @@ public class ToDoTask
 
     public User AssignedTo { get; set; }
 
+    public required int PriorityId { get; set; }
     public Priority Priority { get; set; }
 
+    public required int StateId { get; set; }
     public State State { get; set; }
 
     public DateTimeOffset Deadline { get; set; }
 
     public ToDoTask() { }
-    public ToDoTask(string title, string description, Guid userAssignedId, Priority priority, State state, DateTimeOffset deadline)
+    public ToDoTask(string title, string description, Guid userAssignedId, int priorityId, int stateId, DateTimeOffset deadline)
     {
         Title = title;
         Description = description;
         UserAssignedId = userAssignedId;
-        Priority = priority;
-        State = State.Pending;
+        PriorityId = priorityId;
+        StateId = stateId;
         Deadline = deadline;
     }
 }

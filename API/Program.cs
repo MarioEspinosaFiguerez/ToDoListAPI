@@ -22,12 +22,17 @@ builder.Services.AddSwaggerGen(options =>
 
 builder.Services.AddDbContext<TodoListDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Connection")));
 
+
 // Dependency Injection
 builder.Services.AddScoped<ITaskService, TaskService>();
 builder.Services.AddScoped<ITaskRepository, TaskRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 
-// Fluent validation
-builder.Services.AddValidatorsFromAssemblyContaining<ToDoTaskDtoValidator>();
+// Fluent validation -> Adds all validators that are in the same assembly as the class
+builder.Services.AddValidatorsFromAssemblyContaining<CreateToDoTaskDTOValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<CreateUserValidator>();
 
 var app = builder.Build();
 

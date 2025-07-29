@@ -1,4 +1,13 @@
 ﻿global using Application.Interfaces;
-global using Application.DTOs;
 global using FluentValidation;
 global using FluentValidation.Results;
+global using Application.DTOs;
+global using Application.DTOs.Requests.Tasks;
+global using Application.DTOs.Responses.Tasks;
+global using Application.DTOs.Requests.Users;
+global using Application.DTOs.Responses.Users;
+global using Application.Interfaces.Security;
+global using Domain.Exceptions;
+global using Domain.Interfaces;
+global using Domain.Models;
+global using Shared;

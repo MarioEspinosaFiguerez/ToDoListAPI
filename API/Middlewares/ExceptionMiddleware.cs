@@ -47,7 +47,7 @@ public class ExceptionMiddleware
         {
             Title = GetExceptionErrorTitle(exception, context.Response.StatusCode),
             Status = context.Response.StatusCode,
-            Detail = exception.Message,
+            Detail = GetExceptionErrorDetail(exception),
             Instance = context.Request.Path
         };
 
@@ -58,14 +58,22 @@ public class ExceptionMiddleware
     {
         return ex switch
         {
-            KeyNotFoundException => StatusCodes.Status404NotFound,
+            NotFoundException => StatusCodes.Status404NotFound,
             UnauthorizedAccessException => StatusCodes.Status401Unauthorized,
+            AlreadyExistException => StatusCodes.Status409Conflict,
             DbUpdateConcurrencyException => StatusCodes.Status409Conflict,
             DbUpdateException => StatusCodes.Status500InternalServerError,
             SqlException => StatusCodes.Status500InternalServerError,
             _ => StatusCodes.Status500InternalServerError
         };
     }
+
+    private static string GetExceptionErrorDetail(Exception ex) => ex switch
+    {
+        NotFoundException nfx when nfx.Key is not null => $"{nfx.Message}",
+        AlreadyExistException aex when aex.Key is not null => $"{aex.Message}",
+        _ => ex.Message
+    };
 
     private static string GetExceptionErrorTitle(Exception ex, int statusCode) => ReasonPhrases.GetReasonPhrase(statusCode) ?? ex.GetType().Name;
 }

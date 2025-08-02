@@ -2,5 +2,7 @@
 
 public interface ITaskRepository
 {
-    Task<IEnumerable<ToDoTask>> GetAllTasks();
+    IQueryable<ToDoTask> GetAllTasks();
+    Task<ToDoTask?> GetTaskById(Guid id);
+    Task<ToDoTask> CreateTask(ToDoTask request);
 }

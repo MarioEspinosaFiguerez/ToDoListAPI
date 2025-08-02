@@ -2,5 +2,7 @@
 
 public interface ITaskService
 {
-    Task<IEnumerable<ToDoTaskDTO>> GetAllTasks();
+    IQueryable<ToDoTaskResponse> GetAllTasks();
+    Task<ToDoTaskResponse> GetTaskById(Guid id);
+    Task<ToDoTaskResponse> CreateTask(CreateToDoTaskRequest request);
 }

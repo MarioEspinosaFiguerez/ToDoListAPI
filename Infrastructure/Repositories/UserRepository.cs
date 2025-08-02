@@ -8,6 +8,8 @@ public class UserRepository : IUserRepository
 
     public async Task<bool> ExistsAsync(string email) => await _context.Users.AnyAsync(user => user.Email == email);
 
+    public async Task<bool> ExistAsyncById(Guid id) => await _context.Users.AnyAsync(user => user.Id == id);
+
     public IQueryable<User> GetAllUsers() => _context.Users.AsNoTracking();
 
     public async Task<User?> GetUserById(Guid id) => await _context.Users.FindAsync(id);

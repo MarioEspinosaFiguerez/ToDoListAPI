@@ -3,6 +3,7 @@
 public interface IUserRepository
 {
     public Task<bool> ExistsAsync(string email);
+    public Task<bool> ExistAsyncById(Guid id);
     public IQueryable<User> GetAllUsers();
     public Task<User?> GetUserById(Guid id);
     public Task<User> CreateUser(User request);

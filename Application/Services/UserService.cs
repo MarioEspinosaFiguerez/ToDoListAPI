@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-
-namespace Application.Services;
+﻿namespace Application.Services;
 
 public class UserService : IUserService
 {
@@ -9,6 +7,8 @@ public class UserService : IUserService
     public UserService(IUserRepository userRepository) => _userRepository = userRepository;
 
     public async Task<bool> ExistsAsync(string email) => await _userRepository.ExistsAsync(email);
+
+    public async Task<bool> ExistsAsyncById(Guid id) => await _userRepository.ExistAsyncById(id);
 
     public IQueryable<UserDTO> GetAllUsers()
     {

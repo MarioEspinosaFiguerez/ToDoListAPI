@@ -1,5 +1,4 @@
-﻿
-namespace API.Endpoints.User;
+﻿namespace API.Endpoints.User;
 
 public class GetAllUsersEndpoint : IEndpoint
 {

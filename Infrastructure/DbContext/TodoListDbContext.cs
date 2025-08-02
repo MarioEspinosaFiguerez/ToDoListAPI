@@ -24,8 +24,8 @@ public class TodoListDbContext : DbContext
             entity.Property(u => u.PasswordHash).IsRequired().HasMaxLength(255);
             entity.Property(u => u.BirthDate).HasColumnType("date").IsRequired();
             entity.HasIndex(u => u.Email).IsUnique();
-            entity.Property(u => u.CreatedAt).HasDefaultValueSql("GETUTCDATE()");
-            entity.Property(u => u.UpdatedAt).HasDefaultValueSql("GETUTCDATE()");
+            entity.Property(u => u.CreatedAt).HasDefaultValueSql("GETDATE()");
+            entity.Property(u => u.UpdatedAt).HasDefaultValueSql("GETDATE()");
 
             entity.Property(u => u.JwtTokenVersion).IsRequired().HasDefaultValue(1);
             entity.Property(u => u.RefreshTokenHashed).HasMaxLength(512);
@@ -41,8 +41,8 @@ public class TodoListDbContext : DbContext
 
             entity.Property(t => t.Title).IsRequired().HasMaxLength(200);
             entity.Property(t => t.Description).IsRequired().HasMaxLength(2000);
-            entity.Property(t => t.CreatedAt).HasDefaultValueSql("GETUTCDATE()");
-            entity.Property(t => t.UpdatedAt).HasDefaultValueSql("GETUTCDATE()");
+            entity.Property(t => t.CreatedAt).HasDefaultValueSql("GETDATE()");
+            entity.Property(t => t.UpdatedAt).HasDefaultValueSql("GETDATE()");
         });
 
         // Priority

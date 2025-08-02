@@ -12,6 +12,7 @@ global using Application.DTOs.Requests.Tasks;
 global using Application.DTOs.Responses.Tasks;
 global using Application.DTOs.Requests.Users;
 global using Application.DTOs.Responses.Users;
+global using Application.DTOs;
 global using Application.Interfaces.Security;
 global using Infrastructure.AppDbContext;
 global using Infrastructure.Repositories;

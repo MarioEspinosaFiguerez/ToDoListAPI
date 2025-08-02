@@ -1,4 +1,6 @@
-﻿namespace Application.Services;
+﻿using System.Globalization;
+
+namespace Application.Services;
 
 public class UserService : IUserService
 {
@@ -45,7 +47,7 @@ public class UserService : IUserService
             SecondSurname = String.IsNullOrEmpty(request.SecondSurname) ? null : request.SecondSurname.Trim(),
             Email = request.Email,
             PasswordHash = passwordHasher.Hash(request.Password),
-            BirthDate = request.BirthDate,
+            BirthDate = DateOnly.ParseExact(request.BirthDate, "yyyy-MM-dd", CultureInfo.InvariantCulture),
         };
 
         User createdUser = await _userRepository.CreateUser(entityRequest);
@@ -65,10 +67,11 @@ public class UserService : IUserService
 
         if (userById is null) throw new NotFoundException($"The user with Id {id} doesn't exist", id);
 
-        userById.Name = request.Name ?? userById.Name;
-        userById.FirstSurname = request.FirstSurname ?? userById.FirstSurname;
-        userById.SecondSurname = request.SecondSurname ?? userById.SecondSurname;
-        userById.BirthDate = request.BirthDate ?? userById.BirthDate;
+        userById.Name = !string.IsNullOrEmpty(request.Name) ? request.Name : userById.Name;
+        userById.FirstSurname = !string.IsNullOrEmpty(request.FirstSurname) ? request.FirstSurname : userById.FirstSurname;
+        userById.SecondSurname = !string.IsNullOrEmpty(request.SecondSurname) ? request.SecondSurname : userById.SecondSurname;
+        userById.BirthDate = !string.IsNullOrEmpty(request.BirthDate) ? DateOnly.Parse(request.BirthDate) : userById.BirthDate; ;
+            
         userById.UpdatedAt = DateTime.UtcNow;
         
         if (!string.IsNullOrEmpty(request.Email))

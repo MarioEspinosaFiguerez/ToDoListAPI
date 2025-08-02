@@ -18,6 +18,8 @@ builder.Services.AddSwaggerGen(options =>
         Title = swaggerTitle,
         Version = swaggerVersion,
     });
+
+    options.EnableAnnotations();
 });
 
 builder.Services.AddDbContext<TodoListDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Connection")));

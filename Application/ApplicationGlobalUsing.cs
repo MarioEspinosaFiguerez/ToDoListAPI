@@ -1,6 +1,7 @@
 ﻿global using Application.Interfaces;
 global using FluentValidation;
 global using FluentValidation.Results;
+global using Swashbuckle.AspNetCore.Annotations;
 global using Application.DTOs;
 global using Application.DTOs.Requests.Tasks;
 global using Application.DTOs.Responses.Tasks;

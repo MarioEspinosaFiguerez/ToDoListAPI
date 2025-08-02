@@ -30,6 +30,10 @@ builder.Services.AddScoped<ITaskService, TaskService>();
 builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IPriorityService, PriorityService>();
+builder.Services.AddScoped<IPriorityRepository, PriorityRepository>();
+builder.Services.AddScoped<IStateService, StateService>();
+builder.Services.AddScoped<IStateRepository, StateRepository>();
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 
 // Fluent validation -> Adds all validators that are in the same assembly as the class

@@ -29,6 +29,6 @@ public class User
     public ICollection<ToDoTask> TasksAssigned {  get; set; } = new List<ToDoTask>();
 
     // Audit
-    public DateTimeOffset CreatedAt { get; init; } = DateTimeOffset.UtcNow;
-    public DateTimeOffset UpdatedAt { get; set; } = DateTimeOffset.UtcNow;
+    public DateTimeOffset CreatedAt { get; init; } = DateTimeOffset.Now;
+    public DateTimeOffset UpdatedAt { get; set; } = DateTimeOffset.Now;
 }

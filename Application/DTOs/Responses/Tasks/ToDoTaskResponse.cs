@@ -1,11 +1,12 @@
-﻿namespace Application.DTOs;
+﻿namespace Application.DTOs.Responses.Tasks;
 
-public record ToDoTaskDTO
+public record ToDoTaskResponse
 {
+    public Guid Id { get; init; }
     public string Title { get; init; } = string.Empty;
     public string Description { get; init; } = string.Empty;
     public Guid UserAssignedId { get; init; }
-    public Priority Priority { get; init; }
-    public State State { get; init; } = State.Pending;
+    public EnumDTO State { get; init; }
+    public EnumDTO Priority { get; init; }
     public DateTimeOffset Deadline { get; init; }
 }

@@ -2,8 +2,6 @@
 
 public class UpdateUserEndpoint : IEndpoint
 {
-    // (Mandatory) MapPatch don't know the request is from Body then we have to assign or we can assign [FromServices] to the other parameters 
-
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
         app.MapPatch("/users/{id}", async (Guid id, UpdateUserRequest request, [FromServices]IUserService _userService, [FromServices]IValidator <UpdateUserRequest> validator) =>
@@ -27,7 +25,7 @@ public class UpdateUserEndpoint : IEndpoint
             opt.Summary = "Update a user";
             opt.Responses["200"] = new Microsoft.OpenApi.Models.OpenApiResponse { Description = "Successfull operation. User updated" };
             opt.Responses["404"] = new Microsoft.OpenApi.Models.OpenApiResponse { Description = "Error in operation. User with Id not found" };
-            opt.Responses["409"] = new Microsoft.OpenApi.Models.OpenApiResponse { Description = "Error in Operation. Email already exist" };
+            opt.Responses["409"] = new Microsoft.OpenApi.Models.OpenApiResponse { Description = "Error in operation. Email already exist" };
             return opt;
         });
     }

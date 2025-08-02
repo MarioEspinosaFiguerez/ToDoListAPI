@@ -18,7 +18,7 @@ public class CreateUserValidator : AbstractValidator<CreateUserRequest>
         // Only looks for 1 '@' in the string that is not at the start
         RuleFor(x => x.Email)
             .NotEmpty().WithMessage("Email is mandatory")
-            .EmailAddress().WithMessage("Invalid email format. You need the format like sample@sample.com")
+            .EmailAddress().WithMessage("Invalid email format. You need to follow sample@sample.com format")
             .MaximumLength(255).WithMessage("Email must not exceed 255 characters");
 
         RuleFor(x => x.Password)

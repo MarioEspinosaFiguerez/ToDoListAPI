@@ -18,16 +18,10 @@ public class ToDoTask
     public required int StateId { get; set; }
     public State State { get; set; }
 
-    public DateTimeOffset Deadline { get; set; }
+    public required DateTimeOffset Deadline { get; set; }
 
-    public ToDoTask() { }
-    public ToDoTask(string title, string description, Guid userAssignedId, int priorityId, int stateId, DateTimeOffset deadline)
-    {
-        Title = title;
-        Description = description;
-        UserAssignedId = userAssignedId;
-        PriorityId = priorityId;
-        StateId = stateId;
-        Deadline = deadline;
-    }
+
+    // Audit
+    public DateTimeOffset CreatedAt { get; init; } = DateTimeOffset.Now;
+    public DateTimeOffset UpdatedAt { get; set; } = DateTimeOffset.Now;
 }

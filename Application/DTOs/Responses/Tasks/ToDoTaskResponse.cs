@@ -5,6 +5,7 @@ public record ToDoTaskResponse
     public Guid Id { get; init; }
     public string Title { get; init; } = string.Empty;
     public string Description { get; init; } = string.Empty;
+    public string AssignedToUserName { get; init; } = string.Empty;
     public Guid UserAssignedId { get; init; }
     public EnumDTO State { get; init; }
     public EnumDTO Priority { get; init; }

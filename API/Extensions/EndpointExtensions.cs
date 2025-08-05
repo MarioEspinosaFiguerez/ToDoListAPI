@@ -1,6 +1,4 @@
-﻿using System.Reflection;
-
-namespace API.Extensions
+﻿namespace API.Extensions
 {
     public static class EndpointExtensions
     {
@@ -18,5 +16,6 @@ namespace API.Extensions
                 endpoint.MapEndpoint(app);
             }
         }
+
     }
 }

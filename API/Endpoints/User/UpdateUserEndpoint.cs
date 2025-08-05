@@ -24,7 +24,7 @@ public class UpdateUserEndpoint : IEndpoint
         {
             opt.Summary = "Update a user";
             opt.Responses["200"] = new Microsoft.OpenApi.Models.OpenApiResponse { Description = "Successfull operation. User updated" };
-            opt.Responses["404"] = new Microsoft.OpenApi.Models.OpenApiResponse { Description = "Error in operation. User with Id not found" };
+            opt.Responses["404"] = new Microsoft.OpenApi.Models.OpenApiResponse { Description = "Error in operation. User not found" };
             opt.Responses["409"] = new Microsoft.OpenApi.Models.OpenApiResponse { Description = "Error in operation. Email already exist" };
             return opt;
         });

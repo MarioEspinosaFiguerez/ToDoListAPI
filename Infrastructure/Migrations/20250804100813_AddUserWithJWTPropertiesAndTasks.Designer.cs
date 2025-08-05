@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(TodoListDbContext))]
-    [Migration("20250802101356_AddJWTUserAndTask")]
-    partial class AddJWTUserAndTask
+    [Migration("20250804100813_AddUserWithJWTPropertiesAndTasks")]
+    partial class AddUserWithJWTPropertiesAndTasks
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

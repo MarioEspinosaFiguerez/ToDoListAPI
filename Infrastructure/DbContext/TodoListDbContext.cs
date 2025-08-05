@@ -41,6 +41,7 @@ public class TodoListDbContext : DbContext
 
             entity.Property(t => t.Title).IsRequired().HasMaxLength(200);
             entity.Property(t => t.Description).IsRequired().HasMaxLength(2000);
+            entity.Property(t => t.Deadline).IsRequired();
             entity.Property(t => t.CreatedAt).HasDefaultValueSql("GETDATE()");
             entity.Property(t => t.UpdatedAt).HasDefaultValueSql("GETDATE()");
         });

@@ -1,6 +1,4 @@
-﻿using Domain.Interfaces;
-
-namespace Application.Interfaces;
+﻿namespace Application.Interfaces;
 
 public interface IUserService
 {
@@ -11,4 +9,5 @@ public interface IUserService
     public Task<UserDTO> CreateUser(CreateUserRequest request, IPasswordHasher passwordHasher);
     public Task<UserDTO> UpdateUser(Guid id, UpdateUserRequest request);
     public Task<bool> DeleteUser(Guid id);
+    public Task<IQueryable<ToDoTaskResponse>> GetAllTasksAssignedToUser(Guid userId, Guid? taskId);
 }

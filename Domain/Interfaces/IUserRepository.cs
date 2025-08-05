@@ -9,4 +9,6 @@ public interface IUserRepository
     public Task<User> CreateUser(User request);
     public Task<User> UpdateUser(User request);
     public Task<bool> DeleteUser(User request);
+    public IQueryable<ToDoTask> GetAllTasksAssignedToUser(Guid userId);
+    public IQueryable<ToDoTask> GetTaskByIdAssignedToUser(Guid taskId, Guid userId);
 }

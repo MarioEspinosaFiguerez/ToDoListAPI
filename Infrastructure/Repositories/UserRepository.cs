@@ -35,5 +35,13 @@ public class UserRepository : IUserRepository
         int resultRowsAffected = await _context.SaveChangesAsync();
 
         return resultRowsAffected > 0;
-    }      
+    }
+
+    public IQueryable<ToDoTask> GetAllTasksAssignedToUser(Guid userId) => 
+        _context.Tasks.Include(t => t.Priority).Include(t => t.State).Include(t => t.AssignedTo)
+        .Where(t => t.UserAssignedId == userId).AsNoTracking();
+
+    public IQueryable<ToDoTask> GetTaskByIdAssignedToUser(Guid taskId, Guid userId) => 
+        _context.Tasks.Include(t => t.Priority).Include(t => t.State).Include(t => t.AssignedTo)
+        .Where(t => t.UserAssignedId == userId && t.Id == taskId).AsNoTracking();
 }

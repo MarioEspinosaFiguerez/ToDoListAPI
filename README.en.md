@@ -7,7 +7,7 @@
 ![Serilog](https://img.shields.io/badge/Logging-Serilog-green)
 ![Swagger](https://img.shields.io/badge/API%20Docs-Swagger-orange)
 ![SQL Server](https://img.shields.io/badge/Database-SQL%20Server-lightgrey)
-![Open for Feedback](https://img.shields.io/badge/Open_for-Feedback-lightgrey?style=flat)
+![Open for Feedback](https://img.shields.io/badge/Open_for-Feedback-brightgreen?style=flat)
   
 [🌐English](README.en.md) | [🌐Spanish](README.es.md)  
 

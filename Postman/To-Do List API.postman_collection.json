@@ -1,0 +1,466 @@
+{
+	"info": {
+		"_postman_id": "4befe543-6e00-4e84-8553-79b3a6c34461",
+		"name": "To-Do List API - Samples",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23817610"
+	},
+	"item": [
+		{
+			"name": "UsersEndpoints",
+			"item": [
+				{
+					"name": "Successfull Requests",
+					"item": [
+						{
+							"name": "GetAllUsers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/users",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetUserByID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/users/0f94d0e3-0ef5-4a41-b848-510e0d83ea44",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"users",
+										"0f94d0e3-0ef5-4a41-b848-510e0d83ea44"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateUser",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Paco\",\r\n  \"firstSurname\": \"Perez\",\r\n  \"secondSurname\": \"\",\r\n  \"email\": \"pacoperez@mail.com\",\r\n  \"password\": \"GoodPassword\",\r\n  \"birthDate\": \"2000-07-01\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/users",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateUser",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\":null,\r\n  \"firstSurname\": null,\r\n  \"secondSurname\": \"Gutierrez\",\r\n  \"email\": null,\r\n  \"birthDate\": \"2026-05-01\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/users/0f94d0e3-0ef5-4a41-b848-510e0d83ea44",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"users",
+										"0f94d0e3-0ef5-4a41-b848-510e0d83ea44"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteUser",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"string\",\r\n  \"description\": \"string\",\r\n  \"userAssignedId\": \"{{userId}}\",\r\n  \"priorityId\": 1,\r\n  \"deadline\": \"2025-09-20\"\r\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/users/{{userId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"users",
+										"{{userId}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetTaskByIdAssignedToUser",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "GetTasksAssignedToUser",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"stringstringstringstringstringstringstringstringstr\",\r\n  \"description\": \"stringstringstringstringstringstringstringstringstrstringstringstringstringstringstringstringstringstrstringstringstringstringstringstringstringstringstrstringstringstringstringstringstringstringstring\",\r\n  \"deadline\": \"03-08-2025\"\r\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/users/94b886a9-7259-4c23-bcd4-859951064248/tasks",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"users",
+										"94b886a9-7259-4c23-bcd4-859951064248",
+										"tasks"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Error Requests",
+					"item": [
+						{
+							"name": "GetUserByID - NotFoundError",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/users/{{userId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"users",
+										"{{userId}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateUser - ValidationErrors",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"\",\r\n  \"firstSurname\": \"\",\r\n  \"secondSurname\": \"string\",\r\n  \"email\": \"\",\r\n  \"password\": \"{{password}}\",\r\n  \"birthDate\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/users",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateUser - ValidationErrors",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"stringstringstringstringstringstringstringstringstr\",\r\n  \"firstSurname\": \"stringstringstringstringstringstringstringstringstringstringstringstringstringstringstringstringstrin\",\r\n  \"birthDate\": \"2026-01-01\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/users/a798eb54-3d73-4ed1-9e1f-cc398c73b3d7",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"users",
+										"a798eb54-3d73-4ed1-9e1f-cc398c73b3d7"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "TasksEndpoints",
+			"item": [
+				{
+					"name": "Successfull Requests",
+					"item": [
+						{
+							"name": "GetAllTasks",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/tasks",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"tasks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetTaskById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/tasks/{{taskId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"tasks",
+										"{{taskId}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateTask",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"string\",\r\n  \"description\": \"string\",\r\n  \"userAssignedId\": \"{{userId}}\",\r\n  \"priorityId\": 1,\r\n  \"deadline\": \"2025-09-20\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/tasks",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"tasks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateTask",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"userAssignedId\": \"{{userId}}\",\r\n  \"stateId\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/tasks/7f20bb7a-cfb7-466c-861d-4b52040e2a63",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"tasks",
+										"7f20bb7a-cfb7-466c-861d-4b52040e2a63"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteTask",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/tasks/{{taskId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"tasks",
+										"{{taskId}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Error Requests",
+					"item": [
+						{
+							"name": "GetTaskById - NotFoundError",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/tasks/{{taskId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"tasks",
+										"{{taskId}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateTask - ValidationErrors",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"\",\r\n  \"description\": \"\",\r\n  \"userAssignedId\": \"{{userId}}\",\r\n  \"priorityId\": 0,\r\n  \"deadline\": null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/tasks",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"tasks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateTask - ValidationErrors",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"stringstringstringstringstringstringstringstringstr\",\r\n  \"description\": \"stringstringstringstringstringstringstringstringstrstringstringstringstringstringstringstringstringstrstringstringstringstringstringstringstringstringstrstringstringstringstringstringstringstringstring\",\r\n  \"deadline\": \"03-08-2025\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/tasks/{{taskId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"tasks",
+										"{{taskId}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

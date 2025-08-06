@@ -31,6 +31,8 @@ public class UserRepository : IUserRepository
 
     public async Task<bool> DeleteUser(User request)
     {
+        var tasksAssignedToUser = _context.Tasks.Where(task => task.UserAssignedId == request.Id);
+        _context.Tasks.RemoveRange(tasksAssignedToUser);
         _context.Users.Remove(request);
         int resultRowsAffected = await _context.SaveChangesAsync();
 

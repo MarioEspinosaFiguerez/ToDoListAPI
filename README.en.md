@@ -19,8 +19,6 @@ The architecture follows the Clean Architecture approach, aiming for maintainabl
 
 It serves as a portfolio project to showcase best practices in RESTful API development and can be used as a foundation for future projects.
 
----
-
 ## 🛠 Tools Used
 
 -  **Visual Studio Community 2022** – IDE
@@ -30,8 +28,6 @@ It serves as a portfolio project to showcase best practices in RESTful API devel
 -  **Swagger** – Interactive API documentation
 -  **Postman** – Manual API testing
 -  **Clean Architecture** – Layer separation and maintainability
-
----
 
 ## ⚙️ Setup and Installation
 
@@ -116,8 +112,6 @@ In the /Postman folder you will find:
 
 > ℹ️ The collection uses the variable {{baseUrl}} for the API address.
 Change its value in the environment if your port/localhost differs.
-
----
 
 ## 📑 Main Endpoints
 

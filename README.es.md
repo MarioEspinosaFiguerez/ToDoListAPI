@@ -19,7 +19,6 @@ Este proyecto fue desarrollado con el objetivo de **practicar las nuevas caracte
 Sirve como ejemplo para mi **portfolio** y como base para futuros desarrollos más complejos.
 
   
-
 ## 🛠 Herramientas utilizadas
 
 -  **Visual Studio Community 2022** – IDE
@@ -77,18 +76,18 @@ Abre el archivo `appsettings.json` y modifica la sección `ConnectionStrings` co
 #### 🔹Opción 1: SQL Server instalado localmente
 ```json
 {
-	"ConnectionStrings": {
-		"Connection":"Server=localhost;Database=ToDoList;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=true"
-	}
+    "ConnectionStrings": {
+	"Connection":"Server=localhost;Database=ToDoList;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=true"
+    }
 }
 ```
 
 ####  🔹Opción 2: SQL Server LocalDB (ideal si no tienes SQL Server instalado)
 ```json
 {
-	"ConnectionStrings": {
-		"Connection": "Server=(localdb)\\MSSQLLocalDB;Database=ToDoList;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=true"
-	}
+    "ConnectionStrings": {
+	"Connection": "Server=(localdb)\\MSSQLLocalDB;Database=ToDoList;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=true"
+    }
 }
 
 ```  
@@ -99,7 +98,7 @@ Abre el archivo `appsettings.json` y modifica la sección `ConnectionStrings` co
 
 Abre la consola del Administrador de paquetes:
 
-1. Ve a **View > Other Windows > Package Manager Console**
+1. Ve a **Ve a Vista** > **Otras ventanas** > **Consola del Administrador de Paquetes**
 
 2. En **Default project**, selecciona `Infrastructure`
 

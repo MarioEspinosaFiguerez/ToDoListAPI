@@ -10,7 +10,7 @@
 ![SQL Server](https://img.shields.io/badge/Database-SQL%20Server-lightgrey)
 ![Se Busca Feedback](https://img.shields.io/badge/Se%20Busca-Feedback-brightgreen?style=flat)  
 
-[🌐English](README.en.md) | [🌐Español](README.es.md)
+[🌐Inglés](README.en.md) | [🌐Español](README.es.md)
 
 ## 📌 Sobre el proyecto
 

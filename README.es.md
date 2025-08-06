@@ -100,7 +100,7 @@ Abre la consola del Administrador de paquetes:
 
 1. Ve a **Ve a Vista** > **Otras ventanas** > **Consola del Administrador de Paquetes**
 
-2. En **Default project**, selecciona `Infrastructure`
+2. En **Proyecto por Defecto**, selecciona `Infrastructure`
 
 3. Ejecuta el siguiente comando:
 

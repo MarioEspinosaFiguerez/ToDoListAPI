@@ -26,6 +26,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{327FEEF6-FFAD-4144-AC06-0ACEFBF1960B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{D95DCCF8-46E0-486E-9565-27E3DAC1DC55}"
+	ProjectSection(ProjectDependencies) = postProject
+		{28261981-15A6-4C38-B8AD-04E8639C1B34} = {28261981-15A6-4C38-B8AD-04E8639C1B34}
+		{718C6CC9-B829-485A-AEFA-695D06F654F7} = {718C6CC9-B829-485A-AEFA-695D06F654F7}
+		{8AF90FF7-6771-4221-AD79-1BE4DFE50237} = {8AF90FF7-6771-4221-AD79-1BE4DFE50237}
+		{EFB2F7A2-0488-4541-858A-D813AA845247} = {EFB2F7A2-0488-4541-858A-D813AA845247}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +60,10 @@ Global
 		{327FEEF6-FFAD-4144-AC06-0ACEFBF1960B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{327FEEF6-FFAD-4144-AC06-0ACEFBF1960B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{327FEEF6-FFAD-4144-AC06-0ACEFBF1960B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D95DCCF8-46E0-486E-9565-27E3DAC1DC55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D95DCCF8-46E0-486E-9565-27E3DAC1DC55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D95DCCF8-46E0-486E-9565-27E3DAC1DC55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D95DCCF8-46E0-486E-9565-27E3DAC1DC55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

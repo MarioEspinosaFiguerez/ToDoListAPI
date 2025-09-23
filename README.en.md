@@ -22,11 +22,17 @@ It serves as a portfolio project to showcase best practices in RESTful API devel
 ## 🛠 Tools Used
 
 -  **Visual Studio Community 2022** – IDE
+-  
 -  **.NET 8** with **Minimal API**
+-  
 -  **Entity Framework Core** – ORM with persistence in **SQL Server**
+-  
 -  **Serilog** – Structured logging
+-  
 -  **Swagger** – Interactive API documentation
+-  
 -  **Postman** – Manual API testing
+-  
 -  **Clean Architecture** – Layer separation and maintainability
 
 ## ⚙️ Setup and Installation

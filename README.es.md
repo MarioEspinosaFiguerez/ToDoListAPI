@@ -1,7 +1,7 @@
 
 # 📝 To‑Do List API – Minimal API en .NET 8
 
-![Estado](https://img.shields.io/badge/Estado-🚧%20En%20desarrollo-yellow?style=flat)
+![Estado](https://img.shields.io/badge/Estado-%20Completado-brightgreen?style=flat)
 ![Visual Studio 2022](https://img.shields.io/badge/Visual%20Studio-2022-blue?style=flat&logo=visual-studio&logoColor=white)
 ![.NET 8](https://img.shields.io/badge/.NET-8.0-purple?style=flat)
 ![EF Core](https://img.shields.io/badge/Entity%20Framework-Core-blue)

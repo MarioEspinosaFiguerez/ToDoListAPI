@@ -4,7 +4,6 @@
 ![Visual Studio 2022](https://img.shields.io/badge/Visual%20Studio-2022-blue?style=flat&logo=visual-studio&logoColor=white)
 ![.NET 8](https://img.shields.io/badge/.NET-8.0-purple?style=flat)
 ![EF Core](https://img.shields.io/badge/Entity%20Framework-Core-blue)
-![Serilog](https://img.shields.io/badge/Logging-Serilog-green)
 ![Swagger](https://img.shields.io/badge/API%20Docs-Swagger-orange)
 ![SQL Server](https://img.shields.io/badge/Database-SQL%20Server-lightgrey)
 ![Open for Feedback](https://img.shields.io/badge/Open_for-Feedback-brightgreen?style=flat)
@@ -27,7 +26,6 @@ It serves as a portfolio project to showcase best practices in RESTful API devel
    
 -  **Entity Framework Core** – ORM with persistence in **SQL Server**
    
--  **Serilog** – Structured logging
   
 -  **Swagger** – Interactive API documentation
   

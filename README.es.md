@@ -5,7 +5,6 @@
 ![Visual Studio 2022](https://img.shields.io/badge/Visual%20Studio-2022-blue?style=flat&logo=visual-studio&logoColor=white)
 ![.NET 8](https://img.shields.io/badge/.NET-8.0-purple?style=flat)
 ![EF Core](https://img.shields.io/badge/Entity%20Framework-Core-blue)
-![Serilog](https://img.shields.io/badge/Logging-Serilog-green)
 ![Swagger](https://img.shields.io/badge/API%20Docs-Swagger-orange)
 ![SQL Server](https://img.shields.io/badge/Database-SQL%20Server-lightgrey)
 ![Se Busca Feedback](https://img.shields.io/badge/Se%20Busca-Feedback-brightgreen?style=flat)  
@@ -26,8 +25,6 @@ Sirve como ejemplo para mi **portfolio** y como base para futuros desarrollos m�
 -  **.NET 8** con **Minimal API**
 
 -  **Entity Framework Core** – ORM con persistencia en **SQL Server**
-
--  **Serilog** – Logging estructurado
 
 -  **Swagger** – Documentación interactiva
 

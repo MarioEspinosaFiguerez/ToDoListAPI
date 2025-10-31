@@ -1,5 +1,4 @@
 ﻿namespace Application.Services;
-
 public class UserService : IUserService
 {
     public readonly IUserRepository _userRepository;
